@@ -31,5 +31,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: contosoair
+        name: contosoair-${{ matrix.node-version }}
         path: ${{github.workspace}}
