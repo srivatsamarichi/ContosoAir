@@ -4,6 +4,7 @@
 name: ContosoAir
 
 on:
+  workflow_dispatch:
   push:
     branches: [ master ]
   pull_request:
@@ -28,7 +29,8 @@ jobs:
     - run: npm run build --if-present
     - run: npm test
     - name: Upload artifact
+      if: github.event_name == 'push'
       uses: actions/upload-artifact@v2
       with:
-        name: contosoair
+        name: contosoair-${{ matrix.node-version }}
         path: ${{github.workspace}}
