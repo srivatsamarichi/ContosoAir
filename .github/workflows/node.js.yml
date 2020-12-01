@@ -51,4 +51,4 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         app-name: azoocontosoair
-        publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
+        publish-profile: ${{ secrets.WEB_APP_PUB_PROFILE }}
