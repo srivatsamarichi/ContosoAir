@@ -7,7 +7,7 @@ class BookFlightsRepository {
         cosmosdb_url = cosmosdb_url  || `${cosmosdb_name}.documents.azure.com:10255`;
         database_name = database_name  || 'admin';
         const connectionString = "mongodb://lifeonland:YlZSKk7fBMQZML9SNAfA5Gwqe0St8jxs2vuJgoPZdSUb34eUxMeRQpg7VbAAHeslulPwejprce6ySq6G18gWiQ==@lifeonland.mongo.cosmos.azure.com:10255/?ssl=true&appName=@lifeonland@";
-        mongoose.connect(connectionString, { useNewUrlParser: true });
+        mongoose.connect(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
         mongoose.Promise = global.Promise;
     }
     async getUserInfo(username) {
