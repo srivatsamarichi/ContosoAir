@@ -34,3 +34,21 @@ jobs:
       with:
         name: contosoair-${{ matrix.node-version }}
         path: ${{github.workspace}}
+#--------------------
+  DEPLOY:
+    name: Deploy
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    
+    - name: Download a Build Artifact
+      uses: actions/download-artifact@v2
+      with:
+        name: contosoair-${{ matrix.node-version }}
+        path: ${{github.workspace}}
+    
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v2
+      with:
+        app-name: azoocontosoair
+        publish-profile: ${{ secrets.AZUREWEBAPPPUBLISHPROFILE }}
