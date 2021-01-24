@@ -1,31 +1,32 @@
-const passport = require('passport');
-const LocalStrategy = require('passport-local').Strategy;
+const passport = require("passport");
+const LocalStrategy = require("passport-local").Strategy;
 
 passport.use(
-  new LocalStrategy({
-      usernameField: 'username',
-      passwordField: 'password',
+  new LocalStrategy(
+    {
+      usernameField: "username",
+      passwordField: "password",
       session: true,
-      passReqToCallback: true
+      passReqToCallback: true,
     },
-    function(req, username, password, done) {
+    function (req, username, password, done) {
       if (!username) {
-        req.flash('error', "Login.Error.MissingCredentials");
+        req.flash("error", "Login.Error.MissingCredentials");
         return done(null, false);
       }
 
       return done(null, {
-        name: username
+        name: username,
       });
     }
   )
 );
 
-passport.serializeUser(function(user, done) {
+passport.serializeUser(function (user, done) {
   done(null, user.name);
 });
 
-passport.deserializeUser(function(name, done) {
+passport.deserializeUser(function (name, done) {
   done(null, { name });
 });
 

@@ -6,8 +6,8 @@ Contoso Air is a sample airline booking application with a Node.js based fronten
 
 ## Requirements
 
-* Node v8.9.4 or later
-* Azure CosmosDb
+- Node v8.9.4 or later
+- Azure CosmosDb
 
 ### Local Environment Setup
 
