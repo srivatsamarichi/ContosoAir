@@ -29,6 +29,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
+    - name: Update version number
+      uses: cschleiden/replace-tokens@v1.0
+      with:
+        files: package.json
+      env:
+          VERSION_NUMBER: '1.0.0'
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
