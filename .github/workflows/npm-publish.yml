@@ -18,6 +18,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - name: Update version number
+        uses: cschleiden/replace-tokens@v1.0
+        with:
+          files: package.json
+        env:
+          VERSION_NUMBER: '2.0.0'
       - run: npm ci
       - run: npm test
 
