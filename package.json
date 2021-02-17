@@ -1,6 +1,6 @@
 {
   "name": "@srivatsamarichi/contosoair",
-  "version": "#{version-number}#",
+  "version": "1.0.0",
   "private": false,
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
