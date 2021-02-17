@@ -20,7 +20,7 @@ jobs:
         with:
           files: package.json
         env:
-          VERSION_NUMBER: ${{ github.event.release.tag_name }}
+          VERSION_NUMBER: ${GITHUB_REF#refs/*/}
       - run: npm ci
       - run: npm test
 
@@ -38,7 +38,7 @@ jobs:
         with:
           files: package.json
         env:
-          VERSION_NUMBER: ${{ github.event.release.tag_name }}
+          VERSION_NUMBER: ${GITHUB_REF#refs/*/}
       - run: npm ci
       - run: npm publish
         env:
