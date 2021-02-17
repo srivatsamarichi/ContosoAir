@@ -1,7 +1,11 @@
 {
-  "name": "contoso-air-dev",
-  "version": "0.0.0",
-  "private": true,
+  "name": "@srivatsamarichi/contosoair",
+  "version": "1.0.0",
+  "private": false,
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "repository": "git://github.com/srivatsamarichi/ContosoAir.git",
   "scripts": {
     "start": "node ./server.js --production",
     "local:build": "webpack --env.NODE_ENV=development --mode=development",
