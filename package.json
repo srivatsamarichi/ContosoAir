@@ -1,9 +1,13 @@
 {
   "name": "contosoair",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": false,
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srivatsamarichi/ContosoAir.git"
   },
   "scripts": {
     "start": "node ./server.js --production",
