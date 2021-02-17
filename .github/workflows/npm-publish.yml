@@ -4,10 +4,6 @@
 name: Node.js Package
 
 on:
-  push:
-    branches:
-    - grenston-fix
-    - main
   release:
     types: [created]
 
