@@ -1,14 +1,11 @@
 {
-  "name": "contosoair",
+  "name": "ContosoAir",
   "version": "1.0.0",
   "private": false,
   "publishConfig": {
     "registry":"https://npm.pkg.github.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/srivatsamarichi/ContosoAir.git"
-  },
+  "repository": "git://github.com/srivatsamarichi/ContosoAir.git"
   "scripts": {
     "start": "node ./server.js --production",
     "local:build": "webpack --env.NODE_ENV=development --mode=development",
