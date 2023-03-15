@@ -57,37 +57,35 @@
     /******/
   }; // create a fake namespace object // mode & 1: value is a module id, require it // mode & 2: merge all properties of value into the ns // mode & 4: return value when already ns object // mode & 8|1: behave like require
   /******/
-  /******/ /******/ /******/ /******/ /******/ /******/ __webpack_require__.t = function (
-    value,
-    mode
-  ) {
-    /******/ if (mode & 1) value = __webpack_require__(value);
-    /******/ if (mode & 8) return value;
-    /******/ if (
-      mode & 4 &&
-      typeof value === "object" &&
-      value &&
-      value.__esModule
-    )
-      return value;
-    /******/ var ns = Object.create(null);
-    /******/ __webpack_require__.r(ns);
-    /******/ Object.defineProperty(ns, "default", {
-      enumerable: true,
-      value: value,
-    });
-    /******/ if (mode & 2 && typeof value != "string")
-      for (var key in value)
-        __webpack_require__.d(
-          ns,
-          key,
-          function (key) {
-            return value[key];
-          }.bind(null, key)
-        );
-    /******/ return ns;
-    /******/
-  }; // getDefaultExport function for compatibility with non-harmony modules
+  /******/ /******/ /******/ /******/ /******/ /******/ __webpack_require__.t =
+    function (value, mode) {
+      /******/ if (mode & 1) value = __webpack_require__(value);
+      /******/ if (mode & 8) return value;
+      /******/ if (
+        mode & 4 &&
+        typeof value === "object" &&
+        value &&
+        value.__esModule
+      )
+        return value;
+      /******/ var ns = Object.create(null);
+      /******/ __webpack_require__.r(ns);
+      /******/ Object.defineProperty(ns, "default", {
+        enumerable: true,
+        value: value,
+      });
+      /******/ if (mode & 2 && typeof value != "string")
+        for (var key in value)
+          __webpack_require__.d(
+            ns,
+            key,
+            function (key) {
+              return value[key];
+            }.bind(null, key)
+          );
+      /******/ return ns;
+      /******/
+    }; // getDefaultExport function for compatibility with non-harmony modules
   /******/
   /******/ /******/ __webpack_require__.n = function (module) {
     /******/ var getter =
@@ -786,9 +784,8 @@
                 $.inArray("text/plain", e.originalEvent.clipboardData.types) !==
                   -1
               ) {
-                dateString = e.originalEvent.clipboardData.getData(
-                  "text/plain"
-                );
+                dateString =
+                  e.originalEvent.clipboardData.getData("text/plain");
               } else if (window.clipboardData) {
                 dateString = window.clipboardData.getData("Text");
               } else {
@@ -2370,8 +2367,10 @@
                 val,
                 filtered;
               setters_map["yy"] = setters_map["yyyy"];
-              setters_map["M"] = setters_map["MM"] = setters_map["mm"] =
-                setters_map["m"];
+              setters_map["M"] =
+                setters_map["MM"] =
+                setters_map["mm"] =
+                  setters_map["m"];
               setters_map["dd"] = setters_map["d"];
               date = UTCToday();
               var fparts = format.parts.slice();
@@ -3259,7 +3258,8 @@
                   },
                   // CSS string/identifier serialization
                   // https://drafts.csswg.org/cssom/#common-serializing-idioms
-                  rcssescape = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
+                  rcssescape =
+                    /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
                   fcssescape = function (ch, asCodePoint) {
                     if (asCodePoint) {
                       // U+0000 NULL becomes U+FFFD REPLACEMENT CHARACTER
@@ -5256,9 +5256,8 @@
                       i = temp.length;
                       while (i--) {
                         if ((elem = temp[i])) {
-                          matcherOut[postMap[i]] = !(matcherIn[
-                            postMap[i]
-                          ] = elem);
+                          matcherOut[postMap[i]] = !(matcherIn[postMap[i]] =
+                            elem);
                         }
                       }
                     }
@@ -5786,7 +5785,8 @@
                 elem.nodeName.toLowerCase() === name.toLowerCase()
               );
             }
-            var rsingleTag = /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
+            var rsingleTag =
+              /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i;
 
             // Implement the identical functionality for filter and not
             function winnow(elements, qualifier, not) {
@@ -6654,7 +6654,8 @@
                             // Call an optional hook to record the stack, in case of exception
                             // since it's otherwise lost when execution goes async
                             if (jQuery.Deferred.getStackHook) {
-                              process.stackTrace = jQuery.Deferred.getStackHook();
+                              process.stackTrace =
+                                jQuery.Deferred.getStackHook();
                             }
                             window.setTimeout(process);
                           }
@@ -6825,7 +6826,8 @@
 
             // These usually indicate a programmer mistake during development,
             // warn about them ASAP rather than swallowing them by default.
-            var rerrorNames = /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
+            var rerrorNames =
+              /^(Eval|Internal|Range|Reference|Syntax|Type|URI)Error$/;
 
             jQuery.Deferred.exceptionHook = function (error, stack) {
               // Support: IE 8 - 9 only
@@ -7716,8 +7718,11 @@
             // Support: IE <=9 only
             wrapMap.optgroup = wrapMap.option;
 
-            wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption =
-              wrapMap.thead;
+            wrapMap.tbody =
+              wrapMap.tfoot =
+              wrapMap.colgroup =
+              wrapMap.caption =
+                wrapMap.thead;
             wrapMap.th = wrapMap.td;
 
             function getAll(context, tag) {
@@ -7879,8 +7884,8 @@
               // Support: IE <=11 only
               // Make sure textarea (and checkbox) defaultValue is properly cloned
               div.innerHTML = "<textarea>x</textarea>";
-              support.noCloneChecked = !!div.cloneNode(true).lastChild
-                .defaultValue;
+              support.noCloneChecked =
+                !!div.cloneNode(true).lastChild.defaultValue;
             })();
             var documentElement = document.documentElement;
 
@@ -8695,7 +8700,8 @@
             var /* eslint-disable max-len */
 
               // See https://github.com/eslint/eslint/issues/3229
-              rxhtmlTag = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi,
+              rxhtmlTag =
+                /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi,
               /* eslint-enable */
 
               // Support: IE <=10 - 11, Edge 12 - 13 only
@@ -11920,7 +11926,8 @@
               rantiCache = /([?&])_=[^&]*/,
               rheaders = /^(.*?):[ \t]*([^\r\n]*)$/gm,
               // #7653, #8125, #8152: local protocol detection
-              rlocalProtocol = /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
+              rlocalProtocol =
+                /^(?:about|app|app-storage|.+-extension|file|res|widget):$/,
               rnoContent = /^(?:GET|HEAD)$/,
               rprotocol = /^\/\//,
               /* Prefilters
@@ -12962,7 +12969,14 @@
                     callback = function (type) {
                       return function () {
                         if (callback) {
-                          callback = errorCallback = xhr.onload = xhr.onerror = xhr.onabort = xhr.ontimeout = xhr.onreadystatechange = null;
+                          callback =
+                            errorCallback =
+                            xhr.onload =
+                            xhr.onerror =
+                            xhr.onabort =
+                            xhr.ontimeout =
+                            xhr.onreadystatechange =
+                              null;
 
                           if (type === "abort") {
                             xhr.abort();
@@ -13000,9 +13014,10 @@
 
                     // Listen to events
                     xhr.onload = callback();
-                    errorCallback = xhr.onerror = xhr.ontimeout = callback(
-                      "error"
-                    );
+                    errorCallback =
+                      xhr.onerror =
+                      xhr.ontimeout =
+                        callback("error");
 
                     // Support: IE 9 only
                     // Use onreadystatechange to replace onabort

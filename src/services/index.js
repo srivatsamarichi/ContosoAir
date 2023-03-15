@@ -1,6 +1,6 @@
 const AirportsRepository = require("../repositories").AirportsRepository;
-const DestinationsRepository = require("../repositories")
-  .DestinationsRepository;
+const DestinationsRepository =
+  require("../repositories").DestinationsRepository;
 const DealsRepository = require("../repositories").DealsRepository;
 const BookRepository = require("../repositories").BookRepository;
 const FlightsRepository = require("../repositories").FlightsRepository;
