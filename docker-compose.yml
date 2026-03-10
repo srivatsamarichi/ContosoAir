@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+
+  mongodb:
+    image: mongo:6
+    container_name: contoso-mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  contoso-air:
+    build: .
+    container_name: contoso-air-app
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      MONGO_URL: mongodb://mongodb:27017/contosoair
+      PORT: 8081
+    depends_on:
+      - mongodb
+
+volumes:
+  mongo_data:

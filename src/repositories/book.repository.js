@@ -3,11 +3,10 @@ const UserInfoModelSchema = require("./book.repository.model");
 
 class BookFlightsRepository {
   constructor(options) {
-    let { cosmosdb_name, cosmosdb_key, cosmosdb_url, database_name } = options;
-    cosmosdb_url = cosmosdb_url || `${cosmosdb_name}.documents.azure.com:10255`;
-    database_name = database_name || "admin";
-    const connectionString =
-      "mongodb://lifeonland:YlZSKk7fBMQZML9SNAfA5Gwqe0St8jxs2vuJgoPZdSUb34eUxMeRQpg7VbAAHeslulPwejprce6ySq6G18gWiQ==@lifeonland.mongo.cosmos.azure.com:10255/?ssl=true&appName=@lifeonland@";
+    // let { cosmosdb_name, cosmosdb_key, cosmosdb_url, database_name } = options;
+    // cosmosdb_url = cosmosdb_url || `${cosmosdb_name}.documents.azure.com:10255`;
+    // database_name = database_name || "admin";
+    const connectionString = "mongodb://mongodb:27017/contosoair";
     mongoose.connect(connectionString, {
       useNewUrlParser: true,
       useUnifiedTopology: true,

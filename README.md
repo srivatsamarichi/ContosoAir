@@ -2,7 +2,7 @@
 
 Contoso Air is a sample airline booking application with a Node.js based frontend with a CosmosDB database. Runs a nodejs server (Express v4.16) that stores customer booked flights in a CosmosDb database.
 
-![contoso](ContosAir.png)
+![contoso](Contosoair.png)
 
 ## Requirements
 
